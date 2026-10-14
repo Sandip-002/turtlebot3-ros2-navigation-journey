@@ -61,7 +61,7 @@ printenv ROS_DISTRO
 
 **You should see:** `humble` listed under `/opt/ros`, and `humble` printed by `printenv`.
 
-### Step 1.4: Check which TurtleBot3 packages are installed
+### Step 1.4a: Check which TurtleBot3 packages are installed
 
 ```bash
 # [Pi]
@@ -95,7 +95,107 @@ What each package is for:
 | `turtlebot3_msgs` | Custom message types |
 | `turtlebot3_example` | Demo programs (not used here) |
 
-The same list also tells you everything is already there, so there is nothing to install on the Pi.
+If your list shows these packages, everything is already there and you can skip Step 1.4b.
+If it is empty, or `ros2` was not found in Step 1.3, do Step 1.4b next.
+
+### Step 1.4b: Install ROS 2 and TurtleBot3 (only if they are missing)
+
+> My robot was second-hand and came with everything installed, so I did not need these
+> steps on it. They follow the official ROS 2 and ROBOTIS documentation, and I have not run
+> them on my own robot. Check the current instructions at docs.ros.org and the ROBOTIS
+> e-Manual if something differs for your version.
+
+You need Ubuntu 22.04 (64-bit) on the Pi, because Humble is built for that release, and
+**internet access on the Pi**. My lab router had no internet, so I added a phone hotspot as
+a second wifi network (see Chapter 02).
+
+**1. Check the Pi is online and has free space**
+
+```bash
+# [Pi]
+ping -c 3 packages.ros.org
+df -h /
+```
+
+**2. Add the ROS 2 apt repository**
+
+```bash
+# [Pi]
+sudo apt update && sudo apt install -y software-properties-common curl
+sudo add-apt-repository universe
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key \
+  -o /usr/share/keyrings/ros-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" \
+  | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+sudo apt update
+```
+
+**3. Install ROS 2 Humble (base)**
+
+```bash
+# [Pi]
+sudo apt install -y ros-humble-ros-base
+```
+
+`ros-base` contains the core of ROS 2 without GUI tools. That suits a headless Pi, because
+RViz runs on the PC.
+
+**4. Install the TurtleBot3 packages the Pi needs**
+
+```bash
+# [Pi]
+sudo apt install -y ros-humble-turtlebot3-bringup ros-humble-turtlebot3-teleop
+```
+
+This pulls in the robot driver, the robot model, the messages and the lidar driver as
+dependencies. The Pi does not need Cartographer or Nav2, because they run on the PC in this
+guide. The metapackage `ros-humble-turtlebot3` installs everything, which is what my robot had.
+
+**5. Set the environment permanently**
+
+```bash
+# [Pi]
+echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc
+echo 'export TURTLEBOT3_MODEL=waffle_pi' >> ~/.bashrc
+echo 'export LDS_MODEL=LDS-01' >> ~/.bashrc
+source ~/.bashrc
+```
+
+Use your own robot's values: `burger` or `waffle_pi` for the model, and `LDS-01` or `LDS-02`
+for the lidar (the label is on the sensor).
+
+**6. Let the Pi talk to the OpenCR board over USB**
+
+```bash
+# [Pi]
+sudo cp $(ros2 pkg prefix turtlebot3_bringup)/share/turtlebot3_bringup/script/99-turtlebot3-cdc.rules /etc/udev/rules.d/
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+```
+
+<details>
+<summary>7. OpenCR firmware (only if the board was never flashed for TurtleBot3)</summary>
+
+A used robot normally has this done already. If bringup later cannot talk to the board,
+follow the firmware section of the ROBOTIS e-Manual for your version. In outline:
+download the latest ROS 2 `opencr_update` archive from the ROBOTIS OpenCR-Binaries
+repository, unpack it, and run its `update.sh` script with the board's port and model.
+
+</details>
+
+**8. Verify**
+
+```bash
+# [Pi]
+ros2 pkg list | grep turtlebot3
+printenv TURTLEBOT3_MODEL LDS_MODEL
+```
+
+**You should see:** the TurtleBot3 packages listed, and your model and lidar names printed.
+
+**Why not build from source?** The official guide builds TurtleBot3 with `colcon`. On a
+Raspberry Pi 3 with 1 GB of RAM that is slow and may need extra swap space, so the apt route
+is simpler.
 
 ### Step 1.5: Watch the console for warnings
 
