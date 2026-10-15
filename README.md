@@ -82,7 +82,7 @@ Placeholders like `<PI_IP>` are used instead of real addresses and credentials.
 |---|---------|----------|-------------|--------|
 | 00 | [Before you start](docs/00-before-you-start.md) | Check the hardware, safety, conventions | | Draft |
 | 01 | [Inspecting a used robot](docs/01-inspecting-a-used-robot.md) | Find out what is already installed before installing anything | Could not log in with the default credentials | Draft |
-| 02 | Getting the Pi online | Put the Pi on wifi and log in over SSH | Pi could not join the lab wifi | TODO |
+| 02 | | 02 | [Getting the Pi online](docs/02-getting-the-pi-online.md) | Put the Pi on wifi and log in over SSH | Pi could not join the lab wifi; its IP address changed | Draft |
 | 03 | Why Docker, and setting it up | Run ROS 2 Humble on a PC that has Jazzy | | TODO |
 | 04 | Bringing up the robot | Launch the robot and look at nodes and topics | | TODO |
 | 05 | Two machines, one ROS graph | See the Pi's topics from inside the container | | TODO |
@@ -120,7 +120,7 @@ Where each core ROS 2 idea shows up in the journey:
 | **Parameters** | `use_sim_time` and the Nav2 YAML file (read-only tour) | 12 |
 | **QoS (sidebar)** | Why the map is "latched" and why RViz display settings must match | 10, 12 |
 
-> `TODO: before publishing, capture real output of ros2 node list / topic list / service list / action list` 
+> `TODO: before publishing, capture real output of ros2 node list / topic list / service list / action list`
 > `on the running robot so every row above is backed by something the reader can reproduce.`
 
 ---
