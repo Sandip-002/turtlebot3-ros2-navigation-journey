@@ -144,7 +144,7 @@ ros2 topic info /odom -v
 
 The output lists each **publisher** and **subscriber** by node name, with their settings. Look
 for the node names from Step 4.3. You should find `/hlds_laser_publisher` publishing `/scan`,
-and a robot node subscribing to `/cmd_vel`.
+and `/turtlebot3_node` subscribing to `/cmd_vel`.
 
 > **Quality of Service (QoS):** `-v` also prints a QoS block with *Reliability* and *Durability*.
 > This describes how a topic treats lost or late messages. For now it is enough to know it
