@@ -84,7 +84,7 @@ Placeholders like `<PI_IP>` are used instead of real addresses and credentials.
 | 01 | [Inspecting a used robot](docs/01-inspecting-a-used-robot.md) | Find out what is already installed before installing anything | Could not log in with the default credentials | Draft |
 | 02 | [Getting the Pi online](docs/02-getting-the-pi-online.md) | Put the Pi on wifi and log in over SSH | Pi could not join the lab wifi; its IP address changed | Draft |
 | 03 | [Why Docker, and setting it up](docs/03-docker-on-the-pc.md) | Run ROS 2 Humble on a PC that has Jazzy | The base image had no TurtleBot3 packages | Draft |
-| 04 | Bringing up the robot | Launch the robot and look at nodes and topics | | TODO |
+| 04 | [Bringing up the robot](docs/04-bringing-up-the-robot.md) | Launch the robot and look at nodes and topics | No visible failure, but a wrong clock went unnoticed until Chapter 08 | Draft |
 | 05 | Two machines, one ROS graph | See the Pi's topics from inside the container | | TODO |
 | 06 | Driving the robot | Teleop and `/cmd_vel` | | TODO |
 | 07 | RViz inside Docker | Show GUI windows from a container | | TODO |
