@@ -87,7 +87,7 @@ Placeholders like `<PI_IP>` are used instead of real addresses and credentials.
 | 04 | [Bringing up the robot](docs/04-bringing-up-the-robot.md) | Launch the robot and look at nodes and topics | No visible failure, but a wrong clock went unnoticed until Chapter 08 | Draft |
 | 05 | [Two machines, one ROS graph](docs/05-two-machines-one-ros-graph.md) | See the Pi's topics from inside the container | None: it worked with the defaults | Draft |
 | 06 | [Driving the robot](docs/06-driving-the-robot.md) | Teleop and `/cmd_vel` | An error-looking message that turned out harmless | Draft |
-| 07 | RViz inside Docker | Show GUI windows from a container | | TODO |
+| 07 | [RViz inside Docker](docs/07-rviz-inside-docker.md) | Show GUI windows from a container | Typos in long commands; the display permission had to be granted again | Draft |
 | 08 | Debug case: "No transform" | Find out why the TF tree looked broken | Wrong hypothesis (packet loss), real cause was the clock | TODO |
 | 09 | Time sync without internet | PC as time server, Pi as client | A clock-setting command that added its own delay | TODO |
 | 10 | Mapping with Cartographer | Drive around and build a map (SLAM) | | TODO |
