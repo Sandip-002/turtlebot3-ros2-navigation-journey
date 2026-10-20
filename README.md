@@ -88,8 +88,8 @@ Placeholders like `<PI_IP>` are used instead of real addresses and credentials.
 | 05 | [Two machines, one ROS graph](docs/05-two-machines-one-ros-graph.md) | See the Pi's topics from inside the container | None: it worked with the defaults | Draft |
 | 06 | [Driving the robot](docs/06-driving-the-robot.md) | Teleop and `/cmd_vel` | An error-looking message that turned out harmless | Draft |
 | 07 | [RViz inside Docker](docs/07-rviz-inside-docker.md) | Show GUI windows from a container | Typos in long commands; the display permission had to be granted again | Draft |
-| 08 | Debug case: "No transform" | Find out why the TF tree looked broken | Wrong hypothesis (packet loss), real cause was the clock | TODO |
-| 09 | Time sync without internet | PC as time server, Pi as client | A clock-setting command that added its own delay | TODO |
+| 08 | [Debug case: "No transform"](docs/08-no-transform-and-the-clock.md) | Find out why the TF tree looked broken | Wrong hypothesis (packet loss); the real cause was the clock | Draft |
+| 09 | [Time sync without internet](docs/09-time-sync-without-internet.md) | PC as time server, Pi as client | A clock-setting command that added its own delay | Draft |
 | 10 | Mapping with Cartographer | Drive around and build a map (SLAM) | | TODO |
 | 11 | Saving the map | Write the map to disk and back it up | | TODO |
 | 12 | Navigating with Nav2 | Localise, set an initial pose, send goals | | TODO |
