@@ -69,7 +69,7 @@ beginnings of a map.
 
 The map starts out small, built from the first few scans, and fills in as you drive.
 
-<img src="../assets/10-cartographer-mapping.jpeg" width="1000" alt="Photo of RViz while Cartographer was mapping the lab: white free space, black walls">
+<img src="../assets/10-cartographer-mapping.jpg" width="1000" alt="Photo of RViz while Cartographer was mapping the lab: white free space, black walls">
 
 
 *A photo of my monitor, taken during an early mapping run in the lab. White is free space, black
