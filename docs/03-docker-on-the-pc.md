@@ -119,7 +119,7 @@ connected to this container yet).
 
 ### Step 3.6: Make a container that keeps its changes
 
-The base image has ROS 2 Humble but **not** the TurtleBot3 packages, and with `--rm` anything
+The base image `osrf/ros:humble-desktop` has ROS 2 Humble but **not** the TurtleBot3 packages, and with `--rm` anything
 you install disappears on exit. So create a named container *without* `--rm`:
 
 ```bash
@@ -158,7 +158,7 @@ docker images
 ```
 
 This freezes the container, with the TurtleBot3 packages installed, as a new image named
-`tb3_pc_image`. In Chapter 07 you will start a new container from it with GUI support.
+`tb3_pc_image`. In [Chapter 07](07-rviz-inside-docker.md) you will start a new container from it with GUI support.
 
 ### Step 3.8 (recommended): Make it reproducible with a Dockerfile
 
@@ -212,7 +212,7 @@ to force-stop it. Nothing is lost: run `docker start <name>` again.
 - [ ] `osrf/ros:humble-desktop` appears in `docker images`
 - [ ] A throwaway container prints `humble` for `printenv ROS_DISTRO`
 - [ ] The container `tb3_pc` has the TurtleBot3 packages (`ros2 pkg list | grep turtlebot3`)
-- [ ] You committed it as the image `tb3_pc_image`
+- [ ] You committed it as the image `tb3_pc_image`, so the changes done in the base container is saved for later use (might create a new container from this updated image).
 - [ ] You can explain the difference between an image and a container
 
 ## When it broke
@@ -229,7 +229,8 @@ to force-stop it. Nothing is lost: run `docker start <name>` again.
 
 - You chose Docker to get ROS 2 Humble on a Jazzy-era PC without touching the robot.
 - You met the image and the container, and the idea that a ROS distribution is something you can match on both machines.
-- You built `tb3_pc_image`, a Humble image with the TurtleBot3 packages.
+- You understand that after modifying a base image `osrf/ros:humble-desktop` we need to save it as new image `tb3_pc_image` for later use. Because we don't want to setup TB3 packages again in a new container.
+- IMPORTANT: Docker cannot access your host's graphical user interface (GUI) or display server. You need to share the host's display server and grant permissions. See [Chapter 07](07-rviz-inside-docker.md).
 - Next: start the robot's software on the Pi and look at its nodes and topics.
 
 ## Try it yourself (optional)
