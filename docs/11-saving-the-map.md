@@ -140,10 +140,11 @@ convert ~/tb3_maps/lab_map.pgm -filter point -resize 300% lab_map.png
 `-resize 300%` makes the small image bigger, and `-filter point` keeps the pixels sharp
 instead of blurring them. Open `lab_map.png` to see your map.
 
-![The saved lab map as an image: black walls and obstacles, white free space, grey unknown](../assets/11-lab-map.png)
+<!-- ![The saved lab map as an image: black walls and obstacles, white free space, grey unknown](../assets/11-lab-map.png) -->
+<img src="../assets/11-lab-map.png" width="1000" alt="The saved lab map as an image: black walls and obstacles, white free space, grey unknown">
 
-*The saved map as an ordinary image. If you are sharing a map publicly, remember that it is a
-floor plan of the place you mapped.*
+<!-- *The saved map as an ordinary image. If you are sharing a map publicly, remember that it is a
+floor plan of the place you mapped.* -->
 
 ### Step 11.7: Stop Cartographer
 

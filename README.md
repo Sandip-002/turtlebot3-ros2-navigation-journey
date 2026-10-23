@@ -92,8 +92,8 @@ Placeholders like `<PI_IP>` are used instead of real addresses and credentials.
 | 09 | [Time sync without internet](docs/09-time-sync-without-internet.md) | PC as time server, Pi as client | A clock-setting command that added its own delay | Draft |
 | 10 | [Mapping with Cartographer](docs/10-mapping-with-cartographer.md) | Drive around and build a map (SLAM) | | Draft |
 | 11 | [Saving the map](docs/11-saving-the-map.md) | Write the map to disk and back it up | | Draft |
-| 12 | Navigating with Nav2 | Localise, set an initial pose, send goals | | TODO |
-| 13 | Debug case: wobbly navigation | Low battery or stale state? Build a pre-flight checklist | Cause not fully proven, and the chapter says so | TODO |
+| 12 | [Navigating with Nav2](docs/12-navigating-with-nav2.md) | Localise, set an initial pose, send goals | | Draft |
+| 13 | [Fixing wobbly Navigation](docs/13-wobbly-navigation-and-the-preflight-checklist.md) | Confirm pre-flight checklist, before running | | Draft |
 | A | Concept cheat sheet | One page per ROS idea | | TODO |
 | B | Troubleshooting index | "My symptom is..." → chapter | | TODO |
 | C | Pre-flight checklist | One page to print | | TODO |
