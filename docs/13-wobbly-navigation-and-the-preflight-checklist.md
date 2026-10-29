@@ -25,7 +25,7 @@ version of the story is more useful than a tidy one, so I tell it as it happened
 
 | | |
 |---|---|
-| **Symptom** | The first time I ran Nav2, the robot managed **short goals** but wobbled slightly. It **refused long-distance goals**, and it **could not go to a goal behind it**, which needs a turn |
+| **Symptom** | The first time I ran Nav2, the robot managed **short goals** but wobbled slightly. It **refused long-distance goals**, and it **could not go to a goal behind it**, which needs a 'u' turn |
 | **What I thought it was** | I could not work it out |
 | **What I did** | I restarted the whole system **and** charged the battery a little |
 | **Result** | Smooth navigation everywhere, including turning back to a goal behind the robot |
@@ -143,11 +143,11 @@ When everything is working, fill in a table like this and keep it with your note
 |---------|---------------------------|-------------------|
 | `/tf` rate | about 32 Hz | `ros2 topic hz /tf` (Chapter 08) |
 | TF delay, moving frames | about -0.04 s | `tf2_monitor` (Chapter 09) |
-| `/scan` rate | `fill in` | `ros2 topic hz /scan` |
-| `/odom` rate | `fill in` | `ros2 topic hz /odom` |
-| Battery voltage, charged | `fill in` | `/battery_state` |
-| `get_throttled` | `fill in` (hope for `0x0`) | `vcgencmd` on the Pi |
-| Pi temperature | `fill in` | `vcgencmd measure_temp` |
+| `/scan` rate | `about 5 Hz` | `ros2 topic hz /scan` |
+| `/odom` rate | `about 10 Hz` | `ros2 topic hz /odom` |
+| Battery voltage, charged | `12.4 V` | `/battery_state` |
+| `get_throttled` | `0x80000` (hope for `0x0`) | `vcgencmd` on the Pi |
+| Pi temperature | `about 50deg C` | `vcgencmd measure_temp` |
 
 I did not have a baseline like this before my first run went wrong, which is exactly the
 mistake this chapter is about. Start yours now.
