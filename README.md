@@ -94,7 +94,7 @@ Placeholders like `<PI_IP>` are used instead of real addresses and credentials.
 | 11 | [Saving the map](docs/11-saving-the-map.md) | Write the map to disk and back it up | | Draft |
 | 12 | [Navigating with Nav2](docs/12-navigating-with-nav2.md) | Localise, set an initial pose, send goals | | Draft |
 | 13 | [Fixing wobbly Navigation](docs/13-wobbly-navigation-and-the-preflight-checklist.md) | Confirm pre-flight checklist, before running | | Draft |
-| A | Concept cheat sheet | One page per ROS idea | | TODO |
+| A | [Concept cheat sheet](docs/A-concept-cheat-sheet.md) | One section per ROS idea, with chapter links | | Draft |
 | B | Troubleshooting index | "My symptom is..." → chapter | | TODO |
 | C | Pre-flight checklist | One page to print | | TODO |
 | D | Power and undervoltage | The warning that never fully went away | Unresolved | TODO |
