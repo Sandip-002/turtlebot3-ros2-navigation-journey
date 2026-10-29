@@ -97,7 +97,7 @@ Placeholders like `<PI_IP>` are used instead of real addresses and credentials.
 | A | [Concept cheat sheet](docs/A-concept-cheat-sheet.md) | One section per ROS idea, with chapter links | | Draft |
 | B | [Troubleshooting index](docs/B-troubleshooting-index.md) | "My symptom is..." and where to look | | Draft |
 | C | Pre-flight checklist | One page to print | | TODO |
-| D | Power and undervoltage | The warning that never fully went away | Unresolved | TODO |
+| D | [Power and undervoltage](docs/D-power-and-undervoltage.md) | The warning, and the cable that fixed one cause of it | One cause solved, one never explained | Draft |
 | E | What's next | Camera, Jetson, semantic navigation | | TODO |
 
 ---
