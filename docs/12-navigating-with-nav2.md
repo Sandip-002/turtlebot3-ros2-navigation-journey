@@ -287,7 +287,7 @@ These two are a good test of the whole system.
   <img src="../assets/TB3_RUN_Thumbnail.png" alt="Nav2 driving the TurtleBot3 to a goal: RViz on the left, the real robot on the right" width="600" height="auto" />
   </a>
 
-   *Side by side: RViz on the left, the real robot on the right. Click to watch on YouTube.*
+   *Side by side: RViz on the left, the real robot on the right. Click to watch on Drive.*
 
    What happens, and when:
 
