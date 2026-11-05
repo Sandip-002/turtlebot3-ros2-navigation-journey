@@ -279,6 +279,21 @@ When a short goal works, repeat with:
 
 These two are a good test of the whole system.
 
+   ### Watch it happen
+
+   <!-- [![Nav2 driving the TurtleBot3 to a goal: RViz on the left, the real robot on the right](https://img.youtube.com/vi/<VIDEO_ID>/hqdefault.jpg)](https://youtu.be/<VIDEO_ID>) -->
+
+  <a href="https://drive.google.com/file/d/1kAuPTwCIGlcb8W9VbeIHVOV4YL6y8oJP/view?usp=sharing" target="_blank">
+  <img src="../assets/TB3_RUN_Thumbnail.png" alt="Nav2 driving the TurtleBot3 to a goal: RViz on the left, the real robot on the right" width="600" height="auto" />
+  </a>
+
+   *Side by side: RViz on the left, the real robot on the right. Click to watch on YouTube.*
+
+   What happens, and when:
+
+   - 0:00 `fill in`
+   - 0:xx `fill in`
+
 ### Step 12.7: See the action behind the click
 
 The *Nav2 Goal* button sends an **action goal**. List the actions:
