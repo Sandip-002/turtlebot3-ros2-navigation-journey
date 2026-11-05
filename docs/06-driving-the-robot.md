@@ -62,6 +62,8 @@ Teleop prints the current speeds as you press keys, for example:
 currently:      linear velocity 0.05    angular velocity 0.0
 ```
 
+   > **Jazzy note.** On ROS 2 Jazzy, the TurtleBot3 teleop publishes `geometry_msgs/msg/TwistStamped` on `/cmd_vel` instead of a plain `Twist` (I saw this on the Jetson, see [Appendix E](E-whats-next.md)). `ros2 topic info /cmd_vel -v` shows which type your version uses.
+
 ### Step 6.3: Move the wheels
 
 With the wheels lifted, press `w` a few times and watch both wheels turn. Press `a` and `d` and
